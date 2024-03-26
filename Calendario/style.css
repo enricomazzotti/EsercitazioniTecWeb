@@ -1,0 +1,247 @@
+html {
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    line-height: 1.4;
+    font-weight: 400;
+    color: #4A4A4A;
+}
+
+body {
+    min-height: 100vh;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1100px; 
+    background-color: #f5ffff;
+    border: 5px outset #008AFF;
+    border-radius: 8px;
+}
+
+h1 {
+    width: calc(100% - 2em); 
+    max-width: 600px; 
+    margin: 1em auto;
+    padding: 0 1em; 
+    box-sizing: border-box; 
+}
+
+main {
+    flex: 1;
+    margin: 1em;
+    padding: 1.5em;
+    background-color: #f5ffff;
+    min-width: 300px;
+    max-height: 600px;
+    max-width: 800px;
+}
+
+main p {
+    font-size: 95%;
+}
+
+main div {
+    font-size: 125%;
+}
+
+@media (min-width: 1000px) {
+    h1 {
+        text-align: left;
+        margin: 1em 1em 1em 0;
+        max-width: none;
+        width: auto;
+        padding-left: 1.5em;
+    }
+    .content-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+    main {
+        width: calc(60% - 2em); 
+        margin: 1em;
+        padding: 1.5em;
+    }
+}
+
+.month-indicator {
+    color: #0073FF;
+    text-align: center;
+    font-weight: 500;
+}
+
+.day-of-week,
+.date-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.day-of-week {
+    margin-top: 1.25em;
+}
+
+.day-of-week > * {
+    font-size: 0.85em;
+    color: #0073FF;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    font-variant: small-caps;
+    text-align: center;
+}
+
+@media (max-width: 315px) {
+  .day-of-week > * {
+    font-size: 50%;
+  }
+}
+.date-grid {
+    margin-top: 0.5em;
+    
+}
+  
+.date-grid button:first-child {
+    grid-column: 5;
+}
+  
+.date-grid button {
+    position: relative;
+    border: 1px solid;
+    padding: 10% 10% 80% 10%;
+    text-align: right;
+    background-color: transparent;
+    color: #0500FF;
+    width: auto;
+    height: auto;
+}
+ 
+.date-grid button:hover,
+.date-grid button:focus {
+    outline: none;
+    background-color: #2738FF; 
+    color: #FFFFFF; 
+    cursor: pointer;
+}
+
+.date-grid button:active {
+    background-color: #6975FF; 
+    color: #FFFFFF;
+}
+
+.arrow-button {
+    background-color: #008AFF; 
+    border: none;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-size: 24px;
+    width: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+}
+
+.arrow-button:hover{
+    outline: none;
+    background-color: #2738FF; 
+    color: #FFFFFF; 
+    cursor: pointer;
+}
+
+.arrow-button:active {
+    background-color: #6975FF; 
+    color: #FFFFFF;
+}
+
+.arrow-button.left::before {
+  content: "\2190"; /* Codice Unicode per la freccia a sinistra */
+}
+
+
+.arrow-button.right::before {
+  content: "\2192"; /* Codice Unicode per la freccia a destra */
+}
+
+.accept-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin: 2%;
+}
+
+.deny-button {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin: 2%;
+}
+
+.delete-button {
+    background-color: #ffcccc;
+    color: red;
+    border: 1px solid red;
+    border-radius: 30%;
+    margin-left: 5%;
+}
+
+.delete-button::before {
+    content: "\1F5D1"; /* Codice Unicode per il cestino */
+    font-size: 20px;
+}
+
+.delete-button:hover{
+    outline: none;
+    background-color: #b30000; 
+    color: #FFFFFF; 
+    cursor: pointer;
+}
+  
+.delete-button:active {
+    background-color: #ff8080; 
+    color: #FFFFFF;
+}
+.accept-button::before {
+    content: "\2705"; /* Codice Unicode per il segno di spunta */
+    font-size: 20px;
+}
+.deny-button::before {
+    content: "\274E"; /* Codice Unicode per il segno di x */
+    font-size: 20px;
+}
+
+.urgent::before {
+    content: "\26A0"; /* Codice Unicode per il segnale di pericolo */
+    font-size: 20px;
+}
+
+.place::before {
+    content: "\01F4CD"; /* Codice Unicode per il simbolo del punto sulla mappa */
+    font-size: 20px;
+}
+
+.event-list li{
+  margin-top: 5%;
+  margin-bottom: 5%;
+  border: 1px solid #0500FF;
+  border-radius: 12px;
+  padding: 2%;
+  display: list-item;
+  list-style-type: "\1F4C6  ";
+
+}
+
+[datetime="2024-03-20"]::before{
+  color: red;
+  content: "\1F338";
+  border-radius: 12px;
+  
+}
+
+[datetime="2024-03-31"]::before{
+  color: red;
+  content: "\1F54A";
+  border-radius: 12px;
+}
