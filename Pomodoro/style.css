@@ -1,0 +1,65 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    z-index: 2;
+    overflow: hidden;
+
+}
+
+#form {
+    position: relative;
+    z-index: 10;
+    background-color: #f5ffff;
+    border: 5px outset #008AFF;
+    border-radius: 20px;
+    padding: 5%;
+    /* Ensure the form appears above the blob */
+}
+
+#clock {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    z-index: 1;
+}
+
+.timer {
+    font-size: 2em;
+    color: black;
+}
+
+
+
+.restBlob{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: red;
+}
+
+
+
+.studyBlob{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 0%;
+    background-color: red;
+}
+
+#submitButton{
+    width: 100%;
+}
+
+#textField{
+    padding: 10px;
+}
+
